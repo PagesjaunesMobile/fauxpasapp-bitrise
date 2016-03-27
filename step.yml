@@ -1,0 +1,94 @@
+title: "Fauxpasapp Step"
+summary: Step for Fauxpasapp
+description: |-
+  This is a Step for Fauxpasapp.
+
+  [Faux Pas App](http://fauxpasapp.com)
+
+  This is not an officially supported plugin
+website: https://github.com/mackoj/fauxpasapp-bitrise
+source_code_url: https://github.com/mackoj/fauxpasapp-bitrise
+support_url: https://github.com/mackoj/fauxpasapp-bitrise/issues
+host_os_tags:
+  - osx-10.10
+project_type_tags:
+  - ios
+type_tags:
+  - script
+is_requires_admin_user: true
+is_always_run: true
+is_skippable: false
+run_if: true
+inputs:
+  - fauxpas_license_type:
+    opts:
+      title: License type
+      summary: Set the type in the license between these personal,organization-seat,site and enterprise
+      is_expand: false
+      is_required: true
+      is_dont_change_value: true
+      value_options: ['personal', 'organization-seat', 'site', 'enterprise']
+  - fauxpas_license_name:
+    opts:
+      title: License name
+      summary: Set the name in the license
+      is_expand: false
+      is_required: true
+      is_dont_change_value: true
+  - fauxpas_license_key:
+    opts:
+      title: License Key
+      summary: Set the Key in the license
+      is_expand: false
+      is_required: true
+      is_dont_change_value: true
+  - fauxpas_project_path: $BITRISE_PROJECT_PATH
+    opts:
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_target:
+    opts:
+      title: Xcode target to check
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_workspace:
+    opts:
+      title: Xcode workspace to build project with
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_scheme: $BITRISE_SCHEME
+    opts:
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_build_config:
+    opts:
+      title: Xcode build configuration to check
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_source_dir: $BITRISE_SOURCE_DIR
+    opts:
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+  - fauxpas_partial_custom_config:
+    opts:
+      title: Faux Pas custom configuration
+      summary: Use whatever flag you want to launch faux pas in check mode
+      is_expand: true
+      is_required: false
+      is_dont_change_value: false
+  - fauxpas_debug_mode: false
+    opts:
+      title: Faux Pas Debug
+      is_expand: true
+      is_required: true
+      is_dont_change_value: false
+outputs:
+  - FAUXPAS_OUTPUT_FILE:
+    opts:
+      title: Faux Pas Output
