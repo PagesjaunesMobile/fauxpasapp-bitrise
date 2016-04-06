@@ -6,7 +6,7 @@ This step will use [Faux Pas](http://fauxpasapp.com) in order to check your iOS 
 
 Modify your `bitrise.yml` in order to test it.
 
-For a project that work with a workspace.
+For an app that works with a workspace.
 
 ```yaml
     - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
@@ -21,7 +21,7 @@ For a project that work with a workspace.
         - fauxpas_debug_mode: Set it to true or false in order to use it
 ```
 
-For a project that work with an xcodeproj.
+For an app that works with an xcodeproj.
 ```yaml
     - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
         inputs:
@@ -38,7 +38,7 @@ Add this to your secrets variable in order to test it.
 
 ```yaml
   - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
-  - fauxpas_license_name: Set the name in the license
+  - fauxpas_license_name: Set the name of the license
   - fauxpas_license_key: Set the Key in the license
 ```
 
@@ -47,7 +47,7 @@ Add this to your secrets variable in order to test it.
 - Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
 - Improve Documentation
 - Share in [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib)
-- Open it to third party developer
+- Open it to third-party developer
 
 # Milestone
 
@@ -61,4 +61,4 @@ Add this to your secrets variable in order to test it.
 
   * Improved Documentation
   * Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
-  * Allow third party developer to help
+  * Allow third-party developer to help
