@@ -24,70 +24,50 @@ inputs:
     opts:
       title: License type
       summary: Set the type in the license between these personal,organization-seat,site and enterprise
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
       value_options: ['personal', 'organization-seat', 'site', 'enterprise']
-  - fauxpas_license_name:
+  - fauxpas_license_name: $FAUXPAS_LICENSE_NAME
     opts:
       title: License name
       summary: Set the name in the license
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
-  - fauxpas_license_key:
+  - fauxpas_license_key: $FAUXPAS_LICENSE_KEY
     opts:
       title: License Key
       summary: Set the Key in the license
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_project_path: $BITRISE_PROJECT_PATH
     opts:
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_target:
     opts:
       title: Xcode target to check
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_workspace:
     opts:
       title: Xcode workspace to build project with
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_scheme: $BITRISE_SCHEME
     opts:
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_build_config:
     opts:
       title: Xcode build configuration to check
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_source_dir: $BITRISE_SOURCE_DIR
     opts:
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - fauxpas_partial_custom_config:
     opts:
       title: Faux Pas custom configuration
       summary: Use whatever flag you want to launch faux pas in check mode
-      is_expand: true
-      is_required: false
-      is_dont_change_value: false
-  - fauxpas_debug_mode: false
+  - fauxpas_debug_mode: "false"
     opts:
       title: Faux Pas Debug
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
+      value_options:
+      - "true"
+      - "false"
 outputs:
   - FAUXPAS_OUTPUT_FILE:
     opts:
