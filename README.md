@@ -11,6 +11,7 @@ For an app that works with a workspace.
 ```yaml
     - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
         inputs:
+        - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
         - fauxpas_workspace: pathToYour.xcworkspace
         - fauxpas_scheme: $BITRISE_SCHEME
         - fauxpas_project_path: pathToYour.xcodeproj
@@ -25,6 +26,7 @@ For an app that works with an xcodeproj.
 ```yaml
     - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
         inputs:
+        - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
         - fauxpas_target: targetName
         - fauxpas_project_path: pathToYour.xcodeproj
         - fauxpas_build_config: buildConfiguration
@@ -37,9 +39,8 @@ For an app that works with an xcodeproj.
 Add this to your secrets variable in order to test it.
 
 ```yaml
-  - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
-  - fauxpas_license_name: Set the name of the license
-  - fauxpas_license_key: Set the Key in the license
+  - FAUXPAS_LICENSE_NAME: Set the name of the license
+  - FAUXPAS_LICENSE_KEY: Set the Key in the license
 ```
 
 # To Do
