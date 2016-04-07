@@ -20,28 +20,28 @@ is_always_run: true
 is_skippable: false
 run_if: true
 inputs:
-  - fauxpas_license_type:
+  - fauxpas_license_type: personal
     opts:
       title: License type
       summary: Set the type in the license between these personal,organization-seat,site and enterprise
-      is_expand: false
+      is_expand: true
       is_required: true
-      is_dont_change_value: true
+      is_dont_change_value: false
       value_options: ['personal', 'organization-seat', 'site', 'enterprise']
   - fauxpas_license_name:
     opts:
       title: License name
       summary: Set the name in the license
-      is_expand: false
+      is_expand: true
       is_required: true
-      is_dont_change_value: true
+      is_dont_change_value: false
   - fauxpas_license_key:
     opts:
       title: License Key
       summary: Set the Key in the license
-      is_expand: false
+      is_expand: true
       is_required: true
-      is_dont_change_value: true
+      is_dont_change_value: false
   - fauxpas_project_path: $BITRISE_PROJECT_PATH
     opts:
       is_expand: true
