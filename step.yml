@@ -47,6 +47,7 @@ inputs:
       is_required: true
   - fauxpas_scheme: $BITRISE_SCHEME
     opts:
+      title: If you use a workspace you need to define a shared scheme
       is_required: true
   - fauxpas_build_config:
     opts:
