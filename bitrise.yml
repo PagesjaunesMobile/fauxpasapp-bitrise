@@ -4,7 +4,6 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 app:
   envs:
   # define these in your .bitrise.secrets.yml
-  - fauxpas_license_type: $fauxpas_license_type
   - fauxpas_license_name: $fauxpas_license_name
   - fauxpas_license_key: $fauxpas_license_key
 
@@ -29,6 +28,7 @@ workflows:
         - fauxpas_target: PagesJaunes
         - fauxpas_step_output: fauxpas_output.json
         - fauxpas_debug_mode: "true"
+        - fauxpas_license_type: personal
 
   # ----------------------------------------------------------------
   # --- workflows to Share this step into a Step Library
