@@ -1,10 +1,7 @@
 title: "Fauxpasapp Step"
 summary: Step for Fauxpasapp
 description: |-
-  This is a Step for Fauxpasapp.
-
-  [Faux Pas App](http://fauxpasapp.com)
-
+  This is a Step for [Faux Pas App](http://fauxpasapp.com).
   This is not an officially supported plugin
 website: https://github.com/mackoj/fauxpasapp-bitrise
 source_code_url: https://github.com/mackoj/fauxpasapp-bitrise
@@ -38,6 +35,7 @@ inputs:
       is_required: true
   - fauxpas_project_path: $BITRISE_PROJECT_PATH
     opts:
+      title: Path of the xcodeproj
       is_required: true
   - fauxpas_target:
     opts:
@@ -56,6 +54,7 @@ inputs:
       is_required: true
   - fauxpas_source_dir: $BITRISE_SOURCE_DIR
     opts:
+      title: Path of the source directory
       is_required: true
   - fauxpas_partial_custom_config:
     opts:
