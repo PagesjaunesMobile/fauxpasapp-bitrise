@@ -22,7 +22,6 @@ workflows:
         description: |-
           This step will check your app againts Fauxpas checks
         inputs:
-        - fauxpas_source_dir: /Users/jeffreymacko/project/PagesJaunes/PagesJaunes
         - fauxpas_project_path: /Users/jeffreymacko/project/PagesJaunes/PagesJaunes/PagesJaunes.xcodeproj
         - fauxpas_scheme: PagesJaunes
         - fauxpas_target: PagesJaunes

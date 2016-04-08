@@ -16,7 +16,6 @@ For an app that works with a workspace.
         - fauxpas_project_path: pathToYour.xcodeproj
         - fauxpas_build_config: buildConfiguration
         - fauxpas_build_config: Debug
-        - fauxpas_source_dir: $BITRISE_SOURCE_DIR
         - fauxpas_partial_custom_config: If you want to append some custom param to faux pas
         - fauxpas_debug_mode: Set it to true or false in order to use it
 ```
@@ -29,7 +28,6 @@ For an app that works with an xcodeproj.
         - fauxpas_target: targetName
         - fauxpas_build_config: buildConfiguration
         - fauxpas_build_config: Debug
-        - fauxpas_source_dir: $BITRISE_SOURCE_DIR
         - fauxpas_partial_custom_config: If you want to append some custom param to faux pas
         - fauxpas_debug_mode: Set it to true or false in order to use it
 ```

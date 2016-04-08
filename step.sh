@@ -27,8 +27,8 @@ fi
 if [[ -n "${fauxpas_debug_mode}" ]]; then
 	echo "fauxpas_debug_mode: ${fauxpas_debug_mode}"
 fi
-if [[ -n "${fauxpas_source_dir}" ]]; then
-	echo "fauxpas_source_dir: ${fauxpas_source_dir}"
+if [[ -n "${BITRISE_SOURCE_DIR}" ]]; then
+	echo "BITRISE_SOURCE_DIR: ${BITRISE_SOURCE_DIR}"
 fi
 if [[ -n "${fauxpas_partial_custom_config}" ]]; then
 	echo "fauxpas_partial_custom_config: ${fauxpas_partial_custom_config}"
@@ -64,7 +64,7 @@ if [[ "${fauxpas_debug_mode}" = true ]]; then
 fi
 
 # go to project folder
-cd "${fauxpas_source_dir}"
+cd "${BITRISE_SOURCE_DIR}"
 
 # Install FauxPas
 brew cask install fauxpas
@@ -91,24 +91,24 @@ fauxpas check "${fauxpas_project_path}" $execute_mode $build_config ${fauxpas_pa
 
 export FAUXPAS_OUTPUT_FILE="$PWD/fauxpas_output.json"
 
-# Generate Report
-set -x
-echo "Salut Cyril 😎" > toto.txt
-tar cvfj report.html.tar.bz2 toto.txt
-touch "$PWD/report.html.tar.bz2"
-
-export FAUXPAS_MAIL_ATTACHMENT_FILE="$PWD/report.html.tar.bz2"
-export FAUXPAS_MAIL_HTML_HEAD_CONTENT="<script src=\"https://code.highcharts.com/highcharts.js\"></script>
-<script src=\"https://code.highcharts.com/modules/exporting.js\"></script>"
-export FAUXPAS_MAIL_HTML_BODY_CONTENT="<div id=\"container\" style=\"min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto\"></div><script>$(function(){$("#container").highcharts({chart:{plotBackgroundColor:null,plotBorderWidth:null,plotShadow:!1,type:"pie"},title:{text:"Browser market shares January, 2015 to May, 2015"},tooltip:{pointFormat:"{series.name}: <b>{point.percentage:.1f}%</b>"},plotOptions:{pie:{allowPointSelect:!0,cursor:"pointer",dataLabels:{enabled:!0,format:"<b>{point.name}</b>: {point.percentage:.1f} %",style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black"}}}},series:[{name:"Brands",colorByPoint:!0,data:[{name:"Microsoft Internet Explorer",y:56.33},{name:"Chrome",y:24.03,sliced:!0,selected:!0},{name:"Firefox",y:10.38},{name:"Safari",y:4.77},{name:"Opera",y:.91},{name:"Proprietary or Undetectable",y:.2}]}]})});</script>"
-
-echo ""
-echo "========== Outputs =========="
-echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
-echo "FAUXPAS_MAIL_ATTACHMENT_FILE: ${FAUXPAS_MAIL_ATTACHMENT_FILE}"
-echo "FAUXPAS_MAIL_HTML_HEAD_CONTENT: ${FAUXPAS_MAIL_HTML_HEAD_CONTENT}"
-echo "FAUXPAS_MAIL_HTML_BODY_CONTENT: ${FAUXPAS_MAIL_HTML_BODY_CONTENT}"
-echo "============================="
-echo ""
+# # Generate Report
+# set -x
+# echo "Salut Cyril 😎" > toto.txt
+# tar cvfj report.html.tar.bz2 toto.txt
+# touch "$PWD/report.html.tar.bz2"
+#
+# export FAUXPAS_MAIL_ATTACHMENT_FILE="$PWD/report.html.tar.bz2"
+# export FAUXPAS_MAIL_HTML_HEAD_CONTENT="<script src=\"https://code.highcharts.com/highcharts.js\"></script>
+# <script src=\"https://code.highcharts.com/modules/exporting.js\"></script>"
+# export FAUXPAS_MAIL_HTML_BODY_CONTENT="<div id=\"container\" style=\"min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto\"></div><script>$(function(){$("#container").highcharts({chart:{plotBackgroundColor:null,plotBorderWidth:null,plotShadow:!1,type:"pie"},title:{text:"Browser market shares January, 2015 to May, 2015"},tooltip:{pointFormat:"{series.name}: <b>{point.percentage:.1f}%</b>"},plotOptions:{pie:{allowPointSelect:!0,cursor:"pointer",dataLabels:{enabled:!0,format:"<b>{point.name}</b>: {point.percentage:.1f} %",style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black"}}}},series:[{name:"Brands",colorByPoint:!0,data:[{name:"Microsoft Internet Explorer",y:56.33},{name:"Chrome",y:24.03,sliced:!0,selected:!0},{name:"Firefox",y:10.38},{name:"Safari",y:4.77},{name:"Opera",y:.91},{name:"Proprietary or Undetectable",y:.2}]}]})});</script>"
+#
+# echo ""
+# echo "========== Outputs =========="
+# echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
+# echo "FAUXPAS_MAIL_ATTACHMENT_FILE: ${FAUXPAS_MAIL_ATTACHMENT_FILE}"
+# echo "FAUXPAS_MAIL_HTML_HEAD_CONTENT: ${FAUXPAS_MAIL_HTML_HEAD_CONTENT}"
+# echo "FAUXPAS_MAIL_HTML_BODY_CONTENT: ${FAUXPAS_MAIL_HTML_BODY_CONTENT}"
+# echo "============================="
+# echo ""
 
 exit 0

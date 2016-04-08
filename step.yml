@@ -13,9 +13,8 @@ project_type_tags:
 type_tags:
   - script
 is_requires_admin_user: true
-is_always_run: true
+is_always_run: false
 is_skippable: false
-run_if: true
 inputs:
   - fauxpas_license_type: personal
     opts:
@@ -49,10 +48,6 @@ inputs:
     opts:
       title: Xcode build configuration to check
       is_required: true
-  - fauxpas_source_dir: $BITRISE_SOURCE_DIR
-    opts:
-      title: Path of the source directory
-      is_required: true
   - fauxpas_partial_custom_config:
     opts:
       title: Faux Pas custom configuration
@@ -68,12 +63,12 @@ outputs:
   - FAUXPAS_JSON_OUTPUT_FILE:
     opts:
       title: Faux Pas JSON Output
-  - FAUXPAS_MAIL_ATTACHMENT_FILE:
-    opts:
-      title: Faux Pas diagnostics presented in an HTML report
-  - FAUXPAS_MAIL_HTML_BODY_CONTENT:
-    opts:
-      title: Excerpt of Faux Pas diagnostics for the body of an HTML mail report
-  - FAUXPAS_MAIL_HTML_HEAD_CONTENT:
-    opts:
-      title: Stuff to put in the HEAD of an HTML mail report
+  # - FAUXPAS_MAIL_ATTACHMENT_FILE:
+  #   opts:
+  #     title: Faux Pas diagnostics presented in an HTML report
+  # - FAUXPAS_MAIL_HTML_BODY_CONTENT:
+  #   opts:
+  #     title: Excerpt of Faux Pas diagnostics for the body of an HTML mail report
+  # - FAUXPAS_MAIL_HTML_HEAD_CONTENT:
+  #   opts:
+  #     title: Stuff to put in the HEAD of an HTML mail report
