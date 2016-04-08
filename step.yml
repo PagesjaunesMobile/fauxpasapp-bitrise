@@ -41,10 +41,6 @@ inputs:
     opts:
       title: Xcode target to check
       is_required: true
-  - fauxpas_workspace:
-    opts:
-      title: Xcode workspace to build project with
-      is_required: true
   - fauxpas_scheme: $BITRISE_SCHEME
     opts:
       title: If you use a workspace you need to define a shared scheme

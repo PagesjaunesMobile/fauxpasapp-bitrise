@@ -39,9 +39,6 @@ fi
 if [[ -n "${fauxpas_target}" ]]; then
 	echo "fauxpas_target: ${fauxpas_target}"
 fi
-if [[ -n "${fauxpas_workspace}" ]]; then
-	echo "fauxpas_workspace: ${fauxpas_workspace}"
-fi
 if [[ -n "${fauxpas_scheme}" ]]; then
 	echo "fauxpas_scheme: ${fauxpas_scheme}"
 fi
@@ -53,12 +50,12 @@ echo ""
 
 # Variable verification
 execute_mode=""
-if [[ -n "${fauxpas_workspace}" ]] && [[ -n "${fauxpas_scheme}" ]]; then
-	execute_mode=" --workspace \"${fauxpas_workspace}\" --scheme \"${fauxpas_scheme}\""
+if [[ -n "${fauxpas_scheme}" ]]; then
+	execute_mode=" --workspace \"${fauxpas_project_path}\" --scheme \"${fauxpas_scheme}\""
 elif [[ -n "${fauxpas_target}" ]]; then
 	execute_mode=" -t \"${fauxpas_target}\""
 else
-	echo "Defining (fauxpas_workspace AND fauxpas_scheme) OR fauxpas_target is required."
+	echo "Defining fauxpas_scheme OR fauxpas_target is required."
 	exit 1
 fi
 
