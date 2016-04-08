@@ -95,7 +95,7 @@ fauxpas check "${fauxpas_project_path}" $execute_mode $build_config ${fauxpas_pa
 export FAUXPAS_OUTPUT_FILE="$PWD/fauxpas_output.json"
 
 # Generate Report
-
+set -x
 echo "Salut Cyril 😎" > toto.txt
 tar cvfj report.html.tar.bz2 toto.txt
 touch "$PWD/report.html.tar.bz2"
