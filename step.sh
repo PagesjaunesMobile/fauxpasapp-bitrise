@@ -51,7 +51,7 @@ echo ""
 # Variable verification
 execute_mode=""
 if [[ -n "${fauxpas_scheme}" ]]; then
-	execute_mode=" --workspace \"${fauxpas_project_path}\" --scheme \"${fauxpas_scheme}\""
+	execute_mode=" --workspace ${fauxpas_project_path} --scheme ${fauxpas_scheme}"
 elif [[ -n "${fauxpas_target}" ]]; then
 	execute_mode=" -t \"${fauxpas_target}\""
 else
