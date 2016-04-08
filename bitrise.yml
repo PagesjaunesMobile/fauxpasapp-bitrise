@@ -26,7 +26,6 @@ workflows:
         - fauxpas_project_path: /Users/jeffreymacko/project/PagesJaunes/PagesJaunes/PagesJaunes.xcodeproj
         - fauxpas_scheme: PagesJaunes
         - fauxpas_target: PagesJaunes
-        - fauxpas_step_output: fauxpas_output.json
         - fauxpas_debug_mode: "true"
         - fauxpas_license_type: personal
 
