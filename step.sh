@@ -53,7 +53,7 @@ execute_mode=""
 if [[ -n "${fauxpas_scheme}" ]]; then
 	execute_mode=" --workspace ${fauxpas_project_path} --scheme ${fauxpas_scheme}"
 elif [[ -n "${fauxpas_target}" ]]; then
-	execute_mode=" -t \"${fauxpas_target}\""
+	execute_mode=" -t ${fauxpas_target}"
 else
 	echo "Defining fauxpas_scheme OR fauxpas_target is required."
 	exit 1
