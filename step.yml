@@ -1,7 +1,7 @@
-title: "Fauxpasapp Step"
-summary: Step for Fauxpasapp
+title: "Faux Pas"
+summary: Step for Faux Pas
 description: |-
-  This is a Step for [Faux Pas App](http://fauxpasapp.com).
+  This is a Step for [Faux Pas](http://fauxpasapp.com).
   This is not an officially supported plugin
 website: https://github.com/mackoj/fauxpasapp-bitrise
 source_code_url: https://github.com/mackoj/fauxpasapp-bitrise
@@ -19,18 +19,24 @@ inputs:
   - fauxpas_license_type: personal
     opts:
       title: License type
-      summary: Set the type in the license between these personal,organization-seat,site and enterprise
+      description: |
+        You can specify the type in the license between these personal,organization-seat,site and enterprise
+      summary: ""
       is_required: true
       value_options: ['personal', 'organization-seat', 'site', 'enterprise']
   - fauxpas_license_name: $FAUXPAS_LICENSE_NAME
     opts:
       title: License name
-      summary: Set the name in the license
+      summary: ""
+      description: |
+        Set the name in the license
       is_required: true
   - fauxpas_license_key: $FAUXPAS_LICENSE_KEY
     opts:
-      title: License Key
-      summary: Set the Key in the license
+      title: License key
+      summary: ""
+      description: |
+        Set the Key in the license
       is_required: true
   - fauxpas_project_path: $BITRISE_PROJECT_PATH
     opts:
@@ -38,23 +44,37 @@ inputs:
       is_required: true
   - fauxpas_target:
     opts:
-      title: Xcode target to check
+      title: Project target
+      summary: ""
+      description: |
+        If you don't have a workspace set the target name
       is_required: true
   - fauxpas_scheme: $BITRISE_SCHEME
     opts:
-      title: If you use a workspace you need to define a shared scheme
+      title: Workspace scheme
+      summary: ""
+      description: |
+        If you use a workspace you need to define a shared scheme
       is_required: true
   - fauxpas_build_config:
     opts:
-      title: Xcode build configuration to check
+      title: Build configuration
+      summary: ""
+      description: |
+        Project build configuration
       is_required: true
   - fauxpas_partial_custom_config:
     opts:
-      title: Faux Pas custom configuration
-      summary: Use whatever flag you want to launch faux pas in check mode
+      title: Custom configuration
+      summary: ""
+      description: |
+        If you want you can append command to Faux Pas with this variable
   - fauxpas_debug_mode: "false"
     opts:
-      title: Faux Pas Debug
+      title: Debug Mode
+      summary: ""
+      description: |
+        If you want to see what command are send to the system.
       is_required: true
       value_options:
       - "true"
