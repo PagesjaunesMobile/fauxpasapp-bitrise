@@ -43,8 +43,6 @@ Add this to your secrets variable in order to test it.
 
 - Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
 - Improve Documentation
-- Share in [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib)
-- Open it to third-party developer
 
 # Milestone
 
@@ -54,8 +52,11 @@ Add this to your secrets variable in order to test it.
   * Documentation
   * Share with the community
 
-* 0.2.0
+* 1.0.0
 
   * Improved Documentation
   * Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
   * Allow third-party developer to help
+  * Share the HTML report in complete and excerpt forme
+  * Share the JSON file
+  * Add the icon

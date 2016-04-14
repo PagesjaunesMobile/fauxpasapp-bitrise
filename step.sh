@@ -102,13 +102,13 @@ export FAUXPAS_OUTPUT_FILE="$PWD/fauxpas_output.json"
 # <script src=\"https://code.highcharts.com/modules/exporting.js\"></script>"
 # export FAUXPAS_MAIL_HTML_BODY_CONTENT="<div id=\"container\" style=\"min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto\"></div><script>$(function(){$("#container").highcharts({chart:{plotBackgroundColor:null,plotBorderWidth:null,plotShadow:!1,type:"pie"},title:{text:"Browser market shares January, 2015 to May, 2015"},tooltip:{pointFormat:"{series.name}: <b>{point.percentage:.1f}%</b>"},plotOptions:{pie:{allowPointSelect:!0,cursor:"pointer",dataLabels:{enabled:!0,format:"<b>{point.name}</b>: {point.percentage:.1f} %",style:{color:Highcharts.theme&&Highcharts.theme.contrastTextColor||"black"}}}},series:[{name:"Brands",colorByPoint:!0,data:[{name:"Microsoft Internet Explorer",y:56.33},{name:"Chrome",y:24.03,sliced:!0,selected:!0},{name:"Firefox",y:10.38},{name:"Safari",y:4.77},{name:"Opera",y:.91},{name:"Proprietary or Undetectable",y:.2}]}]})});</script>"
 #
-# echo ""
-# echo "========== Outputs =========="
-# echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
+echo ""
+echo "========== Outputs =========="
+echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
 # echo "FAUXPAS_MAIL_ATTACHMENT_FILE: ${FAUXPAS_MAIL_ATTACHMENT_FILE}"
 # echo "FAUXPAS_MAIL_HTML_HEAD_CONTENT: ${FAUXPAS_MAIL_HTML_HEAD_CONTENT}"
 # echo "FAUXPAS_MAIL_HTML_BODY_CONTENT: ${FAUXPAS_MAIL_HTML_BODY_CONTENT}"
-# echo "============================="
-# echo ""
+echo "============================="
+echo ""
 
 exit 0
