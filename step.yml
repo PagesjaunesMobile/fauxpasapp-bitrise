@@ -83,12 +83,3 @@ outputs:
   - FAUXPAS_JSON_OUTPUT_FILE:
     opts:
       title: Faux Pas JSON Output
-  # - FAUXPAS_MAIL_ATTACHMENT_FILE:
-  #   opts:
-  #     title: Faux Pas diagnostics presented in an HTML report
-  # - FAUXPAS_MAIL_HTML_BODY_CONTENT:
-  #   opts:
-  #     title: Excerpt of Faux Pas diagnostics for the body of an HTML mail report
-  # - FAUXPAS_MAIL_HTML_HEAD_CONTENT:
-  #   opts:
-  #     title: Stuff to put in the HEAD of an HTML mail report
