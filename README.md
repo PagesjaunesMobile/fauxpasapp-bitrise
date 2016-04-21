@@ -55,8 +55,3 @@ Add this to your secrets variable in order to test it.
 * 1.0.0
 
   * Improved Documentation
-  * Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
-  * Allow third-party developer to help
-  * Share the HTML report in complete and excerpt forme
-  * Share the JSON file
-  * Add the icon
