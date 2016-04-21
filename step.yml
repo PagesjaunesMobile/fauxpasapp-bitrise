@@ -3,6 +3,14 @@ summary: Step for Faux Pas
 description: |-
   This is a Step for [Faux Pas](http://fauxpasapp.com).
   This is not an officially supported plugin
+
+  Find errors in your iOS or Mac project
+  Faux Pas inspects your iOS or Mac app’s Xcode project and warns about possible
+  bugs, as well as about maintainability and style issues.
+
+  What the Clang Static Analyzer is to your code, Faux Pas is to your whole
+  Xcode project.
+
 website: https://github.com/mackoj/fauxpasapp-bitrise
 source_code_url: https://github.com/mackoj/fauxpasapp-bitrise
 support_url: https://github.com/mackoj/fauxpasapp-bitrise/issues
