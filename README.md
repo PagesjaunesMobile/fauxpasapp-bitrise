@@ -44,14 +44,10 @@ Add this to your secrets variable in order to test it.
 - Support for generating better report with [fauxpas-web-presenter](https://github.com/FauxPasApp/fauxpas-web-presenter) for the web report
 - Improve Documentation
 
-# Milestone
-
-* 0.1.0
-
-  * Support for workspace / xcodeproj
-  * Documentation
-  * Share with the community
+# Changelog
 
 * 1.0.0
 
-  * Improved Documentation
+  * Install, configure and start Faux Pas
+  * Check the code of a project
+  * Export the result of the analysis in JSON
