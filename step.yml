@@ -19,7 +19,7 @@ host_os_tags:
 project_type_tags:
   - ios
 type_tags:
-  - script
+  - static code analysis
 is_requires_admin_user: true
 is_always_run: false
 is_skippable: false
