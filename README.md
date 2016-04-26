@@ -9,7 +9,7 @@ Modify your `bitrise.yml` in order to test it.
 For an app that works with a workspace.
 
 ```yaml
-    - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
+    - git::https://github.com/PagesjaunesMobile/fauxpasapp-bitrise.git@master:
         inputs:
         - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
         - fauxpas_scheme: $BITRISE_SCHEME
@@ -22,7 +22,7 @@ For an app that works with a workspace.
 
 For an app that works with an xcodeproj.
 ```yaml
-    - git::https://github.com/mackoj/fauxpasapp-bitrise.git@master:
+    - git::https://github.com/PagesjaunesMobile/fauxpasapp-bitrise.git@master:
         inputs:
         - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
         - fauxpas_target: targetName

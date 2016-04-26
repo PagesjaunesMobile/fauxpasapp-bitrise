@@ -11,9 +11,9 @@ description: |-
   What the Clang Static Analyzer is to your code, Faux Pas is to your whole
   Xcode project.
 
-website: https://github.com/mackoj/fauxpasapp-bitrise
-source_code_url: https://github.com/mackoj/fauxpasapp-bitrise
-support_url: https://github.com/mackoj/fauxpasapp-bitrise/issues
+website: https://github.com/PagesjaunesMobile/fauxpasapp-bitrise
+source_code_url: https://github.com/PagesjaunesMobile/fauxpasapp-bitrise
+support_url: https://github.com/PagesjaunesMobile/fauxpasapp-bitrise/issues
 host_os_tags:
   - osx-10.10
 project_type_tags:
