@@ -98,4 +98,8 @@ echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
 echo "============================="
 echo ""
 
+if [[ "${fauxpas_debug_mode}" = true ]]; then
+	cat ${FAUXPAS_OUTPUT_FILE}
+fi
+
 exit 0
