@@ -50,18 +50,18 @@ echo ""
 
 # Variable verification
 execute_mode=""
-if [[ -n "${fauxpas_scheme}" ]]; then
-	execute_mode=" --workspace ${fauxpas_project_path} --scheme ${fauxpas_scheme}"
-elif [[ -n "${fauxpas_target}" ]]; then
+if [[ -n "${fauxpas_target}" ]]; then
 	execute_mode=" -t ${fauxpas_target}"
+elif [[ -n "${fauxpas_scheme}" ]]; then
+	execute_mode=" --workspace ${fauxpas_project_path} --scheme ${fauxpas_scheme}"
 else
 	echo "Defining fauxpas_scheme OR fauxpas_target is required."
 	exit 1
 fi
 
-if [[ "${fauxpas_debug_mode}" = true ]]; then
-	set -x
-fi
+# if [[ "${fauxpas_debug_mode}" = true ]]; then
+# 	set -x
+# fi
 
 # go to project folder
 cd "${BITRISE_SOURCE_DIR}"
@@ -73,13 +73,13 @@ brew cask install fauxpas
 /Users/${LOGNAME}/Applications/FauxPas.app/Contents/Resources/install-cli-tools
 
 # Install FauxPas license
-if [[ "${fauxpas_debug_mode}" = true ]]; then
-	set +x
-fi
+# if [[ "${fauxpas_debug_mode}" = true ]]; then
+# 	set +x
+# fi
 fauxpas updatelicense "${fauxpas_license_type}" "${fauxpas_license_name}" "${fauxpas_license_key}"
-if [[ "${fauxpas_debug_mode}" = true ]]; then
-	set -x
-fi
+# if [[ "${fauxpas_debug_mode}" = true ]]; then
+# 	set -x
+# fi
 
 build_config=""
 if [[ -n "${fauxpas_build_config}" ]]; then
@@ -97,5 +97,9 @@ echo "========== Outputs =========="
 echo "FAUXPAS_OUTPUT_FILE: ${FAUXPAS_OUTPUT_FILE}"
 echo "============================="
 echo ""
+
+if [[ "${fauxpas_debug_mode}" = true ]]; then
+	cat ${FAUXPAS_OUTPUT_FILE}
+fi
 
 exit 0
