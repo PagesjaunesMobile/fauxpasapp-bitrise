@@ -46,9 +46,13 @@ inputs:
       description: |
         Set the Key in the license
       is_required: true
-  - fauxpas_project_path: $BITRISE_PROJECT_PATH
+  - fauxpas_project_path:
     opts:
       title: Path of the xcodeproj
+      is_required: true
+  - fauxpas_workspace_path:
+    opts:
+      title: Path of the xcworkspace
       is_required: true
   - fauxpas_target:
     opts:

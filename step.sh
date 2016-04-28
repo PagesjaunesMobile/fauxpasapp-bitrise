@@ -36,6 +36,9 @@ fi
 if [[ -n "${fauxpas_project_path}" ]]; then
 	echo "fauxpas_project_path: ${fauxpas_project_path}"
 fi
+if [[ -n "${fauxpas_workspace_path}" ]]; then
+	echo "fauxpas_workspace_path: ${fauxpas_workspace_path}"
+fi
 if [[ -n "${fauxpas_target}" ]]; then
 	echo "fauxpas_target: ${fauxpas_target}"
 fi
@@ -53,7 +56,7 @@ execute_mode=""
 if [[ -n "${fauxpas_target}" ]]; then
 	execute_mode=" -t ${fauxpas_target}"
 elif [[ -n "${fauxpas_scheme}" ]]; then
-	execute_mode=" --workspace ${fauxpas_project_path} --scheme ${fauxpas_scheme}"
+	execute_mode=" --workspace ${fauxpas_workspace_path} --scheme ${fauxpas_scheme}"
 else
 	echo "Defining fauxpas_scheme OR fauxpas_target is required."
 	exit 1
@@ -87,7 +90,7 @@ if [[ -n "${fauxpas_build_config}" ]]; then
 fi
 
 # Execute FauxPas
-fauxpas check $execute_mode $build_config ${fauxpas_partial_custom_config} -o json > fauxpas_output.json
+fauxpas check "${fauxpas_project_path}" $execute_mode $build_config ${fauxpas_partial_custom_config} -o json > fauxpas_output.json
 
 export FAUXPAS_OUTPUT_FILE="$PWD/fauxpas_output.json"
 envman add --key FAUXPAS_OUTPUT_FILE --value "$PWD/fauxpas_output.json"
