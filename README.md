@@ -15,7 +15,6 @@ For an app that works with a workspace.
         - fauxpas_scheme: $BITRISE_SCHEME
         - fauxpas_project_path: pathToYour.xcodeproj
         - fauxpas_build_config: buildConfiguration
-        - fauxpas_build_config: Debug
         - fauxpas_partial_custom_config: If you want to append some custom param to faux pas
         - fauxpas_debug_mode: Set it to true or false in order to use it
 ```
@@ -27,7 +26,6 @@ For an app that works with an xcodeproj.
         - fauxpas_license_type: Set the type in the license between these personal,organization-seat,site and enterprise
         - fauxpas_target: targetName
         - fauxpas_build_config: buildConfiguration
-        - fauxpas_build_config: Debug
         - fauxpas_partial_custom_config: If you want to append some custom param to faux pas
         - fauxpas_debug_mode: Set it to true or false in order to use it
 ```
