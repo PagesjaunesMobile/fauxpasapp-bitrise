@@ -87,7 +87,7 @@ if [[ -n "${fauxpas_build_config}" ]]; then
 fi
 
 # Execute FauxPas
-fauxpas check "${fauxpas_project_path}" $execute_mode $build_config ${fauxpas_partial_custom_config} -o json > fauxpas_output.json
+fauxpas check $execute_mode $build_config ${fauxpas_partial_custom_config} -o json > fauxpas_output.json
 
 export FAUXPAS_OUTPUT_FILE="$PWD/fauxpas_output.json"
 envman add --key FAUXPAS_OUTPUT_FILE --value "$PWD/fauxpas_output.json"
